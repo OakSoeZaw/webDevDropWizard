@@ -1,0 +1,11 @@
+---
+logging:
+  level: INFO
+  loggers:
+    com.oaksoe.coursefriends: DEBUG
+
+database:
+  driverClass: org.postgresql.Driver
+  url: jdbc:postgresql://localhost:5432/classesdb
+  user: myuser
+  password: password

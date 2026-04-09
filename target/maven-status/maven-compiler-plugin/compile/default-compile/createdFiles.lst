@@ -1,0 +1,16 @@
+com/oaksoe/coursefriends/resources/UsersResource.class
+com/oaksoe/coursefriends/views/MyScheduleView.class
+com/oaksoe/coursefriends/resources/UserScheduleResource.class
+com/oaksoe/coursefriends/db/ClassDAO.class
+com/oaksoe/coursefriends/core/User.class
+com/oaksoe/coursefriends/views/UserListView.class
+com/oaksoe/coursefriends/resources/MyScheduleResource.class
+com/oaksoe/coursefriends/resources/ScheduleApiResource.class
+com/oaksoe/coursefriends/resources/ClassesResources.class
+com/oaksoe/coursefriends/views/LoginView.class
+com/oaksoe/coursefriends/db/UserDAO.class
+com/oaksoe/coursefriends/db/ScheduleDAO.class
+com/oaksoe/coursefriends/CourseFriendsConfiguration.class
+com/oaksoe/coursefriends/CourseFriendsApplication.class
+com/oaksoe/coursefriends/views/UserScheduleView.class
+com/oaksoe/coursefriends/core/Course.class

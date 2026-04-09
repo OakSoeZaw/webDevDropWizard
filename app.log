@@ -1,0 +1,123 @@
+INFO  [2026-04-09 03:12:49,872] io.dropwizard.core.server.DefaultServerFactory: Registering jersey handler with root path prefix: /
+INFO  [2026-04-09 03:12:49,873] io.dropwizard.core.server.DefaultServerFactory: Registering admin handler with root path prefix: /
+INFO  [2026-04-09 03:12:49,950] io.dropwizard.core.server.ServerFactory: Starting CourseFriends
+================================================================================
+
+                              CourseFriends
+
+================================================================================
+
+INFO  [2026-04-09 03:12:49,984] org.eclipse.jetty.setuid.SetUIDListener: Opened application@6f94a5a5{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+INFO  [2026-04-09 03:12:49,984] org.eclipse.jetty.setuid.SetUIDListener: Opened admin@455c1d8c{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+INFO  [2026-04-09 03:12:49,985] org.eclipse.jetty.server.Server: jetty-12.1.5; built: 2025-12-03T22:18:24.732Z; git: 4905d09d7b6801e792d7b73946cf7b66e4be25d6; jvm 23+37-2369
+INFO  [2026-04-09 03:12:50,091] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@4ba02375{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@7593ea79{STARTED}}
+INFO  [2026-04-09 03:12:50,237] io.dropwizard.jersey.DropwizardResourceConfig: The following paths were found for the configured resources:
+
+    GET     /api/classes (com.oaksoe.coursefriends.resources.ClassesResources)
+    DELETE  /api/schedule (com.oaksoe.coursefriends.resources.ScheduleApiResource)
+    GET     /api/schedule (com.oaksoe.coursefriends.resources.ScheduleApiResource)
+    POST    /api/schedule (com.oaksoe.coursefriends.resources.ScheduleApiResource)
+    PUT     /api/schedule (com.oaksoe.coursefriends.resources.ScheduleApiResource)
+    GET     /api/users (com.oaksoe.coursefriends.resources.UsersResource)
+    POST    /api/users (com.oaksoe.coursefriends.resources.UsersResource)
+    GET     /my-schedule (com.oaksoe.coursefriends.resources.MyScheduleResource)
+    POST    /my-schedule (com.oaksoe.coursefriends.resources.MyScheduleResource)
+    GET     /user-schedule (com.oaksoe.coursefriends.resources.UserScheduleResource)
+
+INFO  [2026-04-09 03:12:50,237] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@4ba02375{ROOT,/,b=null,a=AVAILABLE,h=idrl.LogbackAccessRequestLogAwareHandler@7593ea79{STARTED}}
+INFO  [2026-04-09 03:12:50,239] io.dropwizard.core.setup.AdminEnvironment: tasks = 
+
+    POST    /tasks/log-level (io.dropwizard.servlets.tasks.LogConfigurationTask)
+    POST    /tasks/gc (io.dropwizard.servlets.tasks.GarbageCollectionTask)
+
+INFO  [2026-04-09 03:12:50,239] org.eclipse.jetty.server.handler.ContextHandler: Started idj.MutableServletContextHandler@7c7e73c5{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@13cc0b90{STARTED}}
+INFO  [2026-04-09 03:12:50,239] org.eclipse.jetty.ee10.servlet.ServletContextHandler: Started idj.MutableServletContextHandler@7c7e73c5{ROOT,/,b=null,a=AVAILABLE,h=oeje10s.ServletHandler@13cc0b90{STARTED}}
+23:12:50,240 |-INFO in LogbackAccessRequestLog - Found logback-access-jetty12 version ?
+23:12:50,240 |-INFO in LogbackAccessRequestLog - Found logback-access-common version 2.0.9
+23:12:50,240 |-WARN in LogbackAccessRequestLog - Versions of logback-access-common and logback-access-jetty12 are different!
+23:12:50,240 |-INFO in LogbackAccessRequestLog - Found logback-core version 1.5.26
+23:12:50,240 |-INFO in LogbackAccessRequestLog - Found logback-access-common version 2.0.9
+23:12:50,240 |-WARN in LogbackAccessRequestLog - Expected version of logback-core is ? but found 1.5.26
+
+INFO  [2026-04-09 03:12:50,243] org.eclipse.jetty.server.AbstractConnector: Started application@6f94a5a5{HTTP/1.1, (http/1.1)}{0.0.0.0:8080}
+INFO  [2026-04-09 03:12:50,243] org.eclipse.jetty.server.AbstractConnector: Started admin@455c1d8c{HTTP/1.1, (http/1.1)}{0.0.0.0:8081}
+INFO  [2026-04-09 03:12:50,244] org.eclipse.jetty.server.Server: Started oejs.Server@2dff7085{STARTING}[12.1.5,sto=30000] @259ms
+ERROR [2026-04-09 03:12:55,697] io.dropwizard.jersey.errors.LoggingExceptionMapper: Error handling a request: d425f3c366a3dc42
+! freemarker.template.TemplateNotFoundException: Template not found for name "/com/oaksoe/coursefriends/views/login.ftl".
+! The name was interpreted by this TemplateLoader: ClassTemplateLoader(resourceLoaderClass=com.oaksoe.coursefriends.views.LoginView, basePackagePath="/").
+! at freemarker.template.Configuration.getTemplate(Configuration.java:3029)
+! at freemarker.template.Configuration.getTemplate(Configuration.java:2858)
+! at io.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:96)
+! ... 65 common frames omitted
+! Causing: io.dropwizard.views.common.ViewRenderException: freemarker.template.TemplateNotFoundException: Template not found for name "/com/oaksoe/coursefriends/views/login.ftl".
+! The name was interpreted by this TemplateLoader: ClassTemplateLoader(resourceLoaderClass=com.oaksoe.coursefriends.views.LoginView, basePackagePath="/").
+! at io.dropwizard.views.freemarker.FreemarkerViewRenderer.render(FreemarkerViewRenderer.java:99)
+! at io.dropwizard.views.common.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:73)
+! ... 64 common frames omitted
+! Causing: jakarta.ws.rs.WebApplicationException: HTTP 500 Internal Server Error
+! at io.dropwizard.views.common.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:79)
+! at io.dropwizard.views.common.ViewMessageBodyWriter.writeTo(ViewMessageBodyWriter.java:27)
+! at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.invokeWriteTo(WriterInterceptorExecutor.java:242)
+! at org.glassfish.jersey.message.internal.WriterInterceptorExecutor$TerminalWriterInterceptor.aroundWriteTo(WriterInterceptorExecutor.java:227)
+! at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+! at io.dropwizard.jersey.errors.EofExceptionWriterInterceptor.aroundWriteTo(EofExceptionWriterInterceptor.java:39)
+! at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+! at org.glassfish.jersey.server.internal.JsonWithPaddingInterceptor.aroundWriteTo(JsonWithPaddingInterceptor.java:85)
+! at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+! at org.glassfish.jersey.server.internal.MappableExceptionWrapperInterceptor.aroundWriteTo(MappableExceptionWrapperInterceptor.java:61)
+! at org.glassfish.jersey.message.internal.WriterInterceptorExecutor.proceed(WriterInterceptorExecutor.java:139)
+! at org.glassfish.jersey.message.internal.MessageBodyFactory.writeTo(MessageBodyFactory.java:1116)
+! at org.glassfish.jersey.server.ServerRuntime$Responder.writeResponse(ServerRuntime.java:691)
+! at org.glassfish.jersey.server.ServerRuntime$Responder.processResponse(ServerRuntime.java:398)
+! at org.glassfish.jersey.server.ServerRuntime$Responder.process(ServerRuntime.java:388)
+! at org.glassfish.jersey.server.ServerRuntime$1.run(ServerRuntime.java:277)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:248)
+! at org.glassfish.jersey.internal.Errors$1.call(Errors.java:244)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:292)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:274)
+! at org.glassfish.jersey.internal.Errors.process(Errors.java:244)
+! at org.glassfish.jersey.process.internal.RequestScope.runInScope(RequestScope.java:266)
+! at org.glassfish.jersey.server.ServerRuntime.process(ServerRuntime.java:253)
+! at org.glassfish.jersey.server.ApplicationHandler.handle(ApplicationHandler.java:696)
+! at org.glassfish.jersey.servlet.WebComponent.serviceImpl(WebComponent.java:398)
+! at org.glassfish.jersey.servlet.WebComponent.service(WebComponent.java:350)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:358)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:312)
+! at org.glassfish.jersey.servlet.ServletContainer.service(ServletContainer.java:205)
+! at org.eclipse.jetty.ee10.servlet.ServletHolder.handle(ServletHolder.java:752)
+! at org.eclipse.jetty.ee10.servlet.ServletHandler$ChainEnd.doFilter(ServletHandler.java:1620)
+! at io.dropwizard.servlets.ThreadNameFilter.doFilter(ThreadNameFilter.java:36)
+! at org.eclipse.jetty.ee10.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+! at org.eclipse.jetty.ee10.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1592)
+! at io.dropwizard.jetty.ZipExceptionHandlingServletFilter.doFilter(ZipExceptionHandlingServletFilter.java:30)
+! at org.eclipse.jetty.ee10.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+! at org.eclipse.jetty.ee10.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1592)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.handle(AllowedMethodsFilter.java:46)
+! at io.dropwizard.jersey.filter.AllowedMethodsFilter.doFilter(AllowedMethodsFilter.java:40)
+! at org.eclipse.jetty.ee10.servlet.FilterHolder.doFilter(FilterHolder.java:205)
+! at org.eclipse.jetty.ee10.servlet.ServletHandler$Chain.doFilter(ServletHandler.java:1592)
+! at org.eclipse.jetty.ee10.servlet.ServletHandler$MappedServlet.handle(ServletHandler.java:1554)
+! at org.eclipse.jetty.ee10.servlet.ServletChannel.dispatch(ServletChannel.java:868)
+! at org.eclipse.jetty.ee10.servlet.ServletChannel.handle(ServletChannel.java:449)
+! at org.eclipse.jetty.ee10.servlet.ServletHandler.handle(ServletHandler.java:469)
+! at org.eclipse.jetty.server.Handler$Wrapper.handle(Handler.java:794)
+! at io.dropwizard.request.logging.LogbackAccessRequestLogAwareHandler.handle(LogbackAccessRequestLogAwareHandler.java:14)
+! at org.eclipse.jetty.server.handler.ContextHandler.handle(ContextHandler.java:1224)
+! at org.eclipse.jetty.server.Handler$Wrapper.handle(Handler.java:794)
+! at io.dropwizard.metrics.jetty12.AbstractInstrumentedHandler.handle(AbstractInstrumentedHandler.java:299)
+! at io.dropwizard.jetty.RoutingHandler.handle(RoutingHandler.java:41)
+! at org.eclipse.jetty.server.handler.gzip.GzipHandler.handle(GzipHandler.java:619)
+! at io.dropwizard.jetty.ZipExceptionHandlingGzipHandler.handle(ZipExceptionHandlingGzipHandler.java:21)
+! at org.eclipse.jetty.server.Handler$Wrapper.handle(Handler.java:794)
+! at org.eclipse.jetty.server.handler.GracefulHandler.handle(GracefulHandler.java:112)
+! at org.eclipse.jetty.server.Server.handle(Server.java:197)
+! at org.eclipse.jetty.server.internal.HttpChannelState$HandlerInvoker.run(HttpChannelState.java:720)
+! at org.eclipse.jetty.server.internal.HttpConnection.onFillable(HttpConnection.java:412)
+! at org.eclipse.jetty.server.internal.HttpConnection$FillableCallback.succeeded(HttpConnection.java:1810)
+! at org.eclipse.jetty.io.FillInterest.fillable(FillInterest.java:105)
+! at org.eclipse.jetty.io.SelectableChannelEndPoint$1.run(SelectableChannelEndPoint.java:54)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool.runJob(QueuedThreadPool.java:1009)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.doRunJob(QueuedThreadPool.java:1239)
+! at org.eclipse.jetty.util.thread.QueuedThreadPool$Runner.run(QueuedThreadPool.java:1194)
+! at java.base/java.lang.Thread.run(Thread.java:1575)
+[0:0:0:0:0:0:0:1] - - [09/Apr/2026:03:12:55 +0000] "GET /my-schedule HTTP/1.1" 500 55 "-" "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/146.0.0.0 Safari/537.36" 89

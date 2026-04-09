@@ -1,0 +1,16 @@
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/CourseFriendsApplication.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/CourseFriendsConfiguration.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/core/Course.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/core/User.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/db/ClassDAO.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/db/ScheduleDAO.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/db/UserDAO.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/resources/ClassesResources.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/resources/MyScheduleResource.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/resources/ScheduleApiResource.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/resources/UserScheduleResource.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/resources/UsersResource.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/views/LoginView.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/views/MyScheduleView.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/views/UserListView.java
+/Users/oaksoe/myWebDropWizard/coursefriends/src/main/java/com/oaksoe/coursefriends/views/UserScheduleView.java
