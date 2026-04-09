@@ -9,6 +9,8 @@ import io.dropwizard.core.setup.Bootstrap;
 import io.dropwizard.core.setup.Environment;
 import io.dropwizard.jdbi3.JdbiFactory;
 import io.dropwizard.views.common.ViewBundle;
+import io.dropwizard.configuration.EnvironmentVariableSubstitutor;
+import io.dropwizard.configuration.SubstitutingSourceProvider;
 import org.jdbi.v3.core.Jdbi;
 
 public class CourseFriendsApplication extends Application<CourseFriendsConfiguration> {
@@ -24,6 +26,10 @@ public class CourseFriendsApplication extends Application<CourseFriendsConfigura
 
     @Override
     public void initialize(final Bootstrap<CourseFriendsConfiguration> bootstrap) {
+        EnvironmentVariableSubstitutor substitutor = new EnvironmentVariableSubstitutor(false);
+        SubstitutingSourceProvider provider = new SubstitutingSourceProvider(bootstrap.getConfigurationSourceProvider(), substitutor);
+        bootstrap.setConfigurationSourceProvider(provider);
+
         bootstrap.addBundle(new ViewBundle<>());
     }
 
