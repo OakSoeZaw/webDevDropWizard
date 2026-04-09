@@ -9,3 +9,4 @@ database:
   url: jdbc:postgresql://localhost:5432/classesdb
   user: myuser
   password: ${DATABASEPASSWORD}
+
